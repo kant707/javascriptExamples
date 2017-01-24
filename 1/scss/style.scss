@@ -1,0 +1,313 @@
+/* --------------------------------------------------------
+SASS/SCSS Main Style Sheet for Javascript 30days
+
+version: 1.0
+author: Shashikant
+email: kant707@gmail.com
+----------------------------------------------------------*/
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+
+//@import "common/fonts.scss";
+
+/*!
+* Bootstrap v3.3.7 (http://getbootstrap.com)
+* Copyright 2011-2016 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/common/bootstrap/blob/master/LICENSE)
+*/
+
+// Core variables and mixins
+//@import "common/bootstrap/variables";
+//@import "common/bootstrap/mixins";
+//
+//// Reset and dependencies
+//@import "common/bootstrap/normalize";
+//@import "common/bootstrap/print";
+//@import "common/bootstrap/glyphicons";
+//
+//// Core CSS
+//@import "common/bootstrap/scaffolding";
+//@import "common/bootstrap/type";
+//@import "common/bootstrap/code";
+//@import "common/bootstrap/grid";
+//@import "common/bootstrap/tables";
+//@import "common/bootstrap/forms";
+//@import "common/bootstrap/buttons";
+//
+//// Components
+//@import "common/bootstrap/component-animations";
+//@import "common/bootstrap/dropdowns";
+//@import "common/bootstrap/button-groups";
+//@import "common/bootstrap/input-groups";
+//@import "common/bootstrap/navs";
+//@import "common/bootstrap/navbar";
+//@import "common/bootstrap/breadcrumbs";
+//@import "common/bootstrap/pagination";
+//@import "common/bootstrap/pager";
+//@import "common/bootstrap/labels";
+//@import "common/bootstrap/badges";
+//@import "common/bootstrap/jumbotron";
+//@import "common/bootstrap/thumbnails";
+//@import "common/bootstrap/alerts";
+//@import "common/bootstrap/progress-bars";
+//@import "common/bootstrap/media";
+//@import "common/bootstrap/list-group";
+//@import "common/bootstrap/panels";
+//@import "common/bootstrap/responsive-embed";
+//@import "common/bootstrap/wells";
+//@import "common/bootstrap/close";
+//
+//// Components w/ JavaScript
+//@import "common/bootstrap/modals";
+//@import "common/bootstrap/tooltip";
+//@import "common/bootstrap/popovers";
+//@import "common/bootstrap/carousel";
+//
+//// Utility classes
+//@import "common/bootstrap/utilities";
+//@import "common/bootstrap/responsive-utilities";
+///*** END Bootstrap ***/
+//
+//@import "common/owlcarousel.scss";
+//@import "common/mainheader.scss";
+//
+//$icon-sprite-dimensions: true;
+//$icon-layout: smart;
+//@import "icon/*.png";
+//@include all-icon-sprites;
+//
+//$ficon-sprite-dimensions: true;
+//$ficon-layout: smart;
+//@import "ficon/*.png";
+//@include all-ficon-sprites;
+//$icon-spacing: 20px;
+
+
+html,
+body {
+  font-family: sans-serif;
+  font-size: 10px;
+  line-height: 1.1;
+}
+
+i,span,a {
+  display: inline-block;
+}
+a:visited, a:hover, a:focus {
+  text-decoration: none;
+}
+.valign-bottom {
+  vertical-align: bottom;
+}
+.block {
+  display: block;
+}
+.myimg-responsive {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.ghost-btn {
+  @include border-radius(5px);
+  background: transparent;
+  color: #f47721;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f47721;
+  display: inline-block;
+  font-family: 'OpenSansSemibold';
+  font-size: 14px;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  padding: 16px 15px;
+  min-width: 250px;
+  max-height: 50px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  transition: all 300ms ease-in-out;
+  text-align: center;
+
+  &:hover {
+    background-color: #f47721;
+    color: #fff;
+  }
+
+  &.inverse {
+    border: 1px solid #fff;
+    color: #fff;
+
+    &:hover {
+      border-color: #f47721;
+    }
+  }
+
+  &.whitefill {
+    background-color: #fff;
+
+    &:hover {
+      color: #f47721;
+    }
+  }
+
+  &.longshadow {
+
+    &:hover {
+      @include box-shadow(0px 20px 40px 0px rgba(34, 35, 40, 0.25));
+
+    }
+  }
+
+  &.filled {
+    background-color: #f47721;
+    border-color: #f47721;
+    color: #fff;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+  &.no-margin-3 {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &.first {
+    margin-left: 0;
+  }
+
+  &.last {
+    margin-right: 0;
+  }
+}
+
+
+/*****  Home page  *****/
+.js-drum-kit {
+  background: #000 url(../images/bg_cover.jpg) bottom center;
+  background-size: cover;
+
+  .keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .keys li {
+    list-style-type: none;
+  }
+
+  .key {
+    border: .4rem solid #666;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+  }
+
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
+
+  kbd {
+    display: block;
+    font-size: 4rem;
+  }
+
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
+}
+/*****  END Home page  *****/
+
+
+/*****  About Us page  *****/
+.js-clock {
+  background: #000;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  .colck {
+    @include border-radius(50%);
+    //background: url(../images/clock_bg.png) no-repeat 0 0;
+    //background-size: contain;
+    height: 200px;
+    width: 200px;
+    border: 15px solid #fff;
+    padding: 20px;
+  }
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+
+    &:before {
+      border-radius: (50%);
+      content: "";
+      height: 16px;
+      width: 16px;
+      background: #fff;
+      top: 50%;
+      left: 50%;
+      margin-top: -8px;
+      margin-left: -8px;
+      position: absolute;
+      z-index: 9;
+
+    }
+
+    .hand {
+      border-radius: (10px);
+      width:50%;
+      height:6px;
+      background: #fff;
+      position: absolute;
+      top:50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+
+      transition:transform 0.2s cubic-bezier(0.4,2.08,0.55,0.44);
+
+      &.hour-hand{
+        width:35%;
+        left: 15%;
+      }
+      &.minute-hand{
+        width:45%;
+        left: 5%;
+      }
+      &.second-hand{
+
+        height: 3px;
+      }
+
+
+    }
+    .hand {
+    }
+    .hand {
+    }
+  }
+}
+/*****  END About Us page  *****/
+
